@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  padding: 28px 16px;
+  background: #c81e1e;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 1.9rem;
+}
+
+header p {
+  margin-top: 6px;
+  opacity: 0.95;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px 50px;
+}
+
+.student-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: flex-end;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e0b8b8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(200, 30, 30, 0.12);
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.field {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #a11515;
+}
+
+.field input {
+  padding: 9px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #c81e1e;
+}
+
+.btn-add {
+  flex: 0 0 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #c81e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background: #a11515;
+}
+
+#student-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.student-card {
+  background: #fff;
+  border: 1px solid #e0b8b8;
+  border-top: 4px solid #c81e1e;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(200, 30, 30, 0.10);
+  padding: 16px;
+  text-align: center;
+}
+
+.student-card h3 {
+  font-size: 1.05rem;
+  color: #a11515;
+  overflow-wrap: anywhere;
+}
+
+.student-card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 4px 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.btn-remove {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #c81e1e;
+  background: #fff;
+  border: 1px solid #c81e1e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background: #c81e1e;
+  color: #fff;
+}
+
+.empty-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  padding: 20px 0;
+}
+
+@media (max-width: 1024px) {
+  #student-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #student-list {
+    grid-template-columns: 1fr;
+  }
+}
